@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="369.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConnectFourClientApp.Controllers.ConnectFourController">
+   <children>
+      <Button fx:id="btnReadyToPlay" disable="true" layoutX="441.0" layoutY="315.0" mnemonicParsing="false" onAction="#setPlayerReady" text="Ready to play" />
+      <TextField fx:id="usernameRegisterField" layoutX="428.0" layoutY="22.0" prefHeight="31.0" prefWidth="152.0" promptText="Username" />
+      <Button fx:id="btnRegister" layoutX="467.0" layoutY="111.0" mnemonicParsing="false" onAction="#Register" text="Register" />
+      <PasswordField fx:id="passwordRegisterField" accessibleRole="PASSWORD_FIELD" layoutX="428.0" layoutY="64.0" prefHeight="31.0" prefWidth="152.0" promptText="Password" />
+      <Separator layoutX="413.0" layoutY="150.0" prefHeight="15.0" prefWidth="182.0" />
+      <Separator layoutX="407.0" layoutY="2.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="13.0" />
+      <TextField fx:id="usernameLoginField" layoutX="428.0" layoutY="166.0" prefHeight="31.0" prefWidth="152.0" promptText="Username" />
+      <PasswordField fx:id="passwordLoginField" accessibleRole="PASSWORD_FIELD" layoutX="428.0" layoutY="205.0" prefHeight="31.0" prefWidth="152.0" promptText="Password" />
+      <Button fx:id="btnLogin" layoutX="467.0" layoutY="245.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <Separator layoutX="413.0" layoutY="289.0" prefHeight="15.0" prefWidth="182.0" />
+   </children>
+</AnchorPane>
