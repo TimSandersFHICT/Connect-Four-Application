@@ -5,4 +5,6 @@ public interface IGame {
     boolean checkStartGame();
     void tryMakeMove(int row);
     void SetupGame();
+    int getNumberOfPlayers();
+    Grid getGrid();
 }

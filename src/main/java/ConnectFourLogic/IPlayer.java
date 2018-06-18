@@ -25,4 +25,5 @@ public interface IPlayer {
     void sendCellFilled(int x, int y, boolean isPlayer);
 
     void setEndingMessage(boolean isWinner);
+
 }

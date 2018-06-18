@@ -101,6 +101,16 @@ public class Game implements IGame{
         playerOnTurn = new Random().nextBoolean();
     }
 
+    public int getNumberOfPlayers()
+    {
+        return players.length;
+    }
+
+    public Grid getGrid()
+    {
+        return this.grid;
+    }
+
 
 
 

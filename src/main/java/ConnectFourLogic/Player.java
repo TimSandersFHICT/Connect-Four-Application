@@ -9,6 +9,9 @@ import java.io.IOException;
 public class Player implements IPlayer{
 
     private String password;
+
+
+
     private Session session;
     private Grid grid;
     private boolean ready;
@@ -53,6 +56,8 @@ public class Player implements IPlayer{
     public void setReady(boolean ready) {
         this.ready = ready;
     }
+
+
 
     public void sendReadyMessage()
     {

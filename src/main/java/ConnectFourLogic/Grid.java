@@ -33,12 +33,25 @@ public class Grid {
         {
             if(cell.getCellState() != CellState.FILLED)
             {
+                System.out.println(cell.getX() + cell.getY());
                 return cell;
+
             }
         }
         return null;
     }
 
+
+    public Cell getCellFilled() {
+        for (Cell[] cellArray : cells) {
+            for (Cell cell : cellArray) {
+                if (cell.getCellState() == CellState.FILLED) {
+                    return cell;
+                }
+            }
+        }
+        return null;
+    }
 
 
     public IPlayer checkWin(){
@@ -161,6 +174,42 @@ public class Grid {
             }
         }
         return null;
+    }
+
+    public int getCellX(Cell checkCell) {
+        for (int i = 0; i < cells.length; i++) {
+            for (int j = 0; j < cells[0].length; j++) {
+                Cell cell = cells[i][j];
+                if (cell == checkCell) {
+                    return i;
+                }
+            }
+        }
+        return 0;
+    }
+
+    public int getCellY(Cell checkCell) {
+        for (int i = 0; i < cells.length; i++) {
+            for (int j = 0; j < cells[0].length; j++) {
+                Cell cell = cells[i][j];
+                if (cell == checkCell) {
+                    return j;
+                }
+            }
+        }
+        return 0;
+    }
+
+    public boolean checkIfCellEmpty(int x, int y) {
+        try {
+            if (cells[x][y].getCellState() == CellState.EMPTY) {
+                return true;
+            }
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            //ignore
+        }
+        return false;
     }
 
 
